@@ -1,5 +1,4 @@
 ﻿using BikeRentalApi.Models;
-using System;
 
 namespace CustomerSite.Models
 {

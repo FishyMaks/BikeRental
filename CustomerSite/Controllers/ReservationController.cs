@@ -1,8 +1,8 @@
 ﻿using BikeRentalApi.Models;
+using CustomerSite.Models;
+using CustomerSite.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using CustomerSite.Services;
-using CustomerSite.Models;
 
 namespace CustomerSite.Controllers
 {

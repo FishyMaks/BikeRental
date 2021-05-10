@@ -1,14 +1,12 @@
-﻿using BikeRentalApi.Models;
+﻿using BikeRentalApi;
+using BikeRentalApi.Models;
 using BikeRentalApi.Models.Repositories;
 using EmployeeSite.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
-using BikeRentalApi.Repositories.Extensions;
-using BikeRentalApi;
-using Microsoft.AspNetCore.Http;
 
 namespace EmployeeSite.Controllers
 {
@@ -52,7 +50,7 @@ namespace EmployeeSite.Controllers
 
             await _storeRepo.DeleteAsync(id, BikeRentalRoute.BikeStores);
 
-            return View(nameof(Index));
+            return RedirectToAction(nameof(Index));
         }
     }
 }

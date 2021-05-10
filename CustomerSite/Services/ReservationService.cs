@@ -1,9 +1,9 @@
-﻿using BikeRentalApi.Models;
+﻿using BikeRentalApi;
+using BikeRentalApi.Models;
 using BikeRentalApi.Models.Repositories;
+using BikeRentalApi.Repositories.Extensions;
 using System;
 using System.Threading.Tasks;
-using BikeRentalApi;
-using BikeRentalApi.Repositories.Extensions;
 
 namespace CustomerSite.Services
 {

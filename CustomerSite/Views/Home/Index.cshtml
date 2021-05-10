@@ -26,6 +26,7 @@
                         </div>
                     </div>
                 </th>
+                <th scope="col"><h4>Store</h4></th>
                 <th scope="col"><h4>Style</h4></th>
                 <th scope="col"><h4>Electric Motor</h4></th>
                 <th scope="col"><h4>All Terrain Suspension</h4></th>
@@ -48,6 +49,7 @@
                     <strong>@bikeButtonText</strong>
                 </a>
             </th>
+            <td>@bike.OwningStore.Name</td>
             <td>@bike.BikeStyle</td>
             <td>@(hasElectricMotor ? "Yes" : "No")</td>
             <td>@(hasAllTerrain ? "Yes" : "No")</td>

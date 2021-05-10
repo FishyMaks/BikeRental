@@ -90,7 +90,7 @@ namespace BikeRentalApi.Data
                     BikeId = 1,
                     CurrentStoreId = 1,
                     DateReserved = DateTime.Now.AddDays(-32), // reserved it for 30 days
-                    DateDue = DateTime.Now.AddDays(-2),       
+                    DateDue = DateTime.Now.AddDays(-2),
                     DateReturned = DateTime.Now,              // returned today, 2 days after due
                     GrandTotal = 1000.00m,                    // seeded value not actually accurate
                     Archive = true

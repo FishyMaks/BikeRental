@@ -1,6 +1,5 @@
 ﻿using BikeRentalApi.Models;
 using System.Threading.Tasks;
-using System;
 
 namespace CustomerSite.Services
 {

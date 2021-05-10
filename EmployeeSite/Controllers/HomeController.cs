@@ -1,14 +1,7 @@
-﻿using BikeRentalApi.Models;
-using BikeRentalApi.Models.Repositories;
-using EmployeeSite.Models;
+﻿using EmployeeSite.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using BikeRentalApi.Repositories.Extensions;
-using BikeRentalApi;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics;
 
 namespace EmployeeSite.Controllers
 {
