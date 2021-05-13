@@ -4,19 +4,19 @@ namespace BikeRentalApi.Models
 {
     public class Person : BaseEntity
     {
-        [Required]
+        [Required(ErrorMessage = "First Name is required")]
         [StringLength(100)]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Last Name is required")]
         [StringLength(100)]
         public string LastName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Email is required")]
         [EmailAddress]
         public string EmailAddress { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Phone number is required")]
         [Phone]
         public string PhoneNumber { get; set; }
     }

@@ -1,11 +1,10 @@
 ﻿using BikeRentalApi.Models;
-using BikeRentalApi.Models.Repositories;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 
-namespace BikeRentalApi.Repositories
+namespace Services.Repositories
 {
     public class ApiRepository<T> : IRepositoryAsync<T> where T : IEntity
     {

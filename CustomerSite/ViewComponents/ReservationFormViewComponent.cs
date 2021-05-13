@@ -1,5 +1,5 @@
-﻿using CustomerSite.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Services.Reservations;
 
 namespace CustomerSite.ViewComponents
 {
@@ -11,12 +11,12 @@ namespace CustomerSite.ViewComponents
 
         public IViewComponentResult Invoke(int bikeId)
         {
-            var vm = new CustomerReservationViewModel
+            var request = new ReservationRequest
             {
                 RequestedBikeId = bikeId
             };
 
-            return View(vm);
+            return View(request);
         }
     }
 }

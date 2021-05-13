@@ -16,7 +16,6 @@ namespace BikeRentalApi.Models
         public bool? AllTerrainSuspension { get; set; }
         public string BikeStyle { get; set; }
         public bool Available { get; set; }
-        public decimal? Surcharge { get; set; }
         public decimal Price { get; set; }
 
         public virtual BikeStore OwningStore { get; set; }

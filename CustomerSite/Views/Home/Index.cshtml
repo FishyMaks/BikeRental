@@ -4,11 +4,11 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4 pb-4">Welcome!</h1>
-    <h3 class="text-left">Browse </h3>
 
     @if(Model.Any())
     {
+    <h1 class="display-4 pb-4">Welcome!</h1>
+    <h3 class="text-left">Browse</h3>
     <table class="table table-bordered table-hover text-left">
         <thead class="thead-dark">
             <tr>
@@ -49,7 +49,7 @@
                     <strong>@bikeButtonText</strong>
                 </a>
             </th>
-            <td>@bike.OwningStore.Name</td>
+            <td>@(bike.OwningStore?.Name ?? "")</td>
             <td>@bike.BikeStyle</td>
             <td>@(hasElectricMotor ? "Yes" : "No")</td>
             <td>@(hasAllTerrain ? "Yes" : "No")</td>
@@ -60,6 +60,6 @@
     }
     else
     {
-        <h3 class="text-center">No bikes available, <strong>go away</strong></h3>
+        <h1 class="text-center">No bikes available, <strong>go away</strong></h1>
     }
 </div>

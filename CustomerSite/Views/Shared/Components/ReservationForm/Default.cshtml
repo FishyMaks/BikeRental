@@ -1,32 +1,32 @@
-﻿@model CustomerReservationViewModel
+﻿@model Services.Reservations.ReservationRequest 
 
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 <input hidden asp-for="RequestedBikeId" />
 <div class="form-group">
     <label asp-for="Customer.FirstName">First Name</label>
-    <input class="form-control" asp-for="Customer.FirstName" />
+    <input class="form-control" asp-for="Customer.FirstName" placeholder="John"/>
     <span asp-validation-for="Customer.FirstName" class="text-danger"></span>
 </div>
 
 <div class="form-group">
     <label asp-for="Customer.LastName">Last Name</label>
-    <input class="form-control" asp-for="Customer.LastName" />
+    <input class="form-control" asp-for="Customer.LastName" placeholder="Doe"/>
     <span asp-validation-for="Customer.LastName" class="text-danger"></span>
 </div>
 
 <div class="form-group">
     <label asp-for="Customer.PhoneNumber">Phone</label>
-    <input class="form-control" asp-for="Customer.PhoneNumber" />
+    <input class="form-control" asp-for="Customer.PhoneNumber" placeholder="###-####"/>
     <span asp-validation-for="Customer.PhoneNumber" class="text-danger"></span>
 </div>
 
 <div class="form-group">
     <label asp-for="Customer.EmailAddress">Email</label>
-    <input class="form-control" asp-for="Customer.EmailAddress" />
+    <input class="form-control" asp-for="Customer.EmailAddress" placeholder="john_doe@example.com"/>
     <span asp-validation-for="Customer.EmailAddress" class="text-danger"></span>
 </div>
 
 <div class="form-group">
-    <label asp-for="DaysRequested">How many days would you like to rent this bike?</label>
+    <label asp-for="DaysRequested">How many days would you like to rent? (Max 30)</label>
     <input class="form-control" asp-for="DaysRequested" value="1" min="1" max="30" />
 </div>

@@ -1,9 +1,9 @@
-﻿using BikeRentalApi;
-using BikeRentalApi.Models;
-using BikeRentalApi.Models.Repositories;
+﻿using BikeRentalApi.Models;
 using EmployeeSite.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Services;
+using Services.Repositories;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;

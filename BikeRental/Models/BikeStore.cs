@@ -12,8 +12,9 @@ namespace BikeRentalApi.Models
         }
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
-        public decimal? HourlyRate { get; set; }
-        public double? Discount { get; set; }
+        public decimal DailyRate { get; set; }
+        public decimal Surcharge { get; set; }
+        public decimal Discount { get; set; }
         public decimal? Latitude { get; set; }
         public decimal? Longitude { get; set; }
 

@@ -3,7 +3,6 @@
 @{
     string reserveButtonClass = Model.Available ? "btn-success" : "btn-warning";
     string reserveButtonText = Model.Available ? "Reserve Now!" : "Check Availability";
-    string reserveButtonDataTarget = Model.Available ? "#reservationModal" : "#availabilityModal";
     bool hasAllTerrain = Model.AllTerrainSuspension ?? false;
     bool hasElectric = Model.ElectricMotor ?? false;
     bool invalidSubmission = (bool?)TempData["InvalidSubmit"] ?? false;
@@ -59,12 +58,11 @@
             <tfoot>
                 <tr>
                     <th colspan="2">
-                        <button type="button" data-toggle="modal" data-target=@reserveButtonDataTarget
+                        <button type="button" data-toggle="modal" data-target="#reserveButtonModal"
                                 class="btn @reserveButtonClass rounded-pill">
                             <strong>@reserveButtonText</strong>
                         </button>
                         <h3>$@Model.Price/day </h3>
-                        (+ $@Model.Surcharge surcharge)
                     </th>
                 </tr>
             </tfoot>
@@ -76,29 +74,11 @@
     </div>
 </div>
 
-@*Check availability modal*@
-<div class="modal fade" id="availabilityModal" tabindex="-1">
+<div class="modal fade" id="reserveButtonModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">
-                    Availability
-                </h5>
-            </div>
-            <div class="modal-body">
-                <vc:availability-check bike-id="@Model.Id" />
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-@*Reservation modal*@
-<div class="modal fade" id="reservationModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+            @if (Model.Available)
+            {
             <div class="modal-header">
                 <h5 class="modal-title">
                     Please fill out the information below
@@ -113,6 +93,21 @@
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="submit" form="reservationForm" class="btn btn-primary">Request reservation</button>
             </div>
+            }
+            else
+            {
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    Availability
+                </h5>
+            </div>
+            <div class="modal-body">
+                <vc:availability-check bike-id="@Model.Id" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            }
         </div>
     </div>
 </div>

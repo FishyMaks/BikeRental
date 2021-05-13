@@ -1,4 +1,4 @@
-﻿namespace BikeRentalApi
+﻿namespace Services
 {
     public class BikeRentalRoute
     {

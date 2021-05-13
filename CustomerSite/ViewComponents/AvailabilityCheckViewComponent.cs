@@ -1,7 +1,7 @@
 ﻿using BikeRentalApi.Models;
-using BikeRentalApi.Models.Repositories;
-using BikeRentalApi.Repositories.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using Services.Extensions;
+using Services.Repositories;
 using System.Threading.Tasks;
 
 namespace CustomerSite.ViewComponents

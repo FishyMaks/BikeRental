@@ -47,8 +47,16 @@
                             </a>
                         </th>
                         <td>@res.Customer.LastName</td>
-                        <td>@res.BikeId, @res.Bike.BikeStyle</td>
-                        <td>@res.CurrentStoreId, @res.Bike.OwningStoreId</td>
+                        @if (res.Bike != null)
+                        {
+                            <td>@res.BikeId, @res.Bike.BikeStyle</td>
+                            <td>@res.CurrentStoreId, @res.Bike.OwningStoreId</td>
+                        }
+                        else
+                        {
+                            <td>?, ?</td>
+                            <td>@res.CurrentStoreId, ?</td>
+                        }
                         <td>@res.DateReserved</td>
                         <td>@res.DateReturned</td>
                     </tr>
